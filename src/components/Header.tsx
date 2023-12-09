@@ -123,10 +123,17 @@ export const Header = () => {
           horizontal: 'right',
         }}
       >
-        <Typography variant='body2' mb={1} ml={2} textAlign='left'>
-          Your notifications
-        </Typography>
+        <MenuItem sx={{ my: 1 }}>
+          <Stack direction='row' gap={2}>
+            <Avatar src='https://cdn.tuoitre.vn/thumb_w/640/471584752817336320/2023/2/10/2736796065095908771941249179080146527866732n-16760123424561767223067.jpg' />
+            <Stack>
+              <Typography fontWeight={500}>Cristiano Ronaldo</Typography>
+              <Typography>Cristiano has create new Topic in your course</Typography>
+            </Stack>
+          </Stack>
+        </MenuItem>
         <Divider />
+
         <MenuItem sx={{ my: 1 }}>
           <Stack direction='row' gap={2}>
             <Avatar src='https://cdn.tuoitre.vn/thumb_w/640/471584752817336320/2023/2/10/2736796065095908771941249179080146527866732n-16760123424561767223067.jpg' />
@@ -136,15 +143,7 @@ export const Header = () => {
             </Stack>
           </Stack>
         </MenuItem>
-        <MenuItem sx={{ my: 1 }}>
-          <Stack direction='row' gap={2}>
-            <Avatar src='https://cdn.tuoitre.vn/thumb_w/640/471584752817336320/2023/2/10/2736796065095908771941249179080146527866732n-16760123424561767223067.jpg' />
-            <Stack>
-              <Typography fontWeight={500}>Cristiano Ronaldo</Typography>
-              <Typography>Cristiano has create new Topic in your course</Typography>
-            </Stack>
-          </Stack>
-        </MenuItem>
+        <Divider />
         <MenuItem sx={{ my: 1 }}>
           <Stack direction='row' gap={2}>
             <Avatar src='https://cdn.tuoitre.vn/thumb_w/640/471584752817336320/2023/2/10/2736796065095908771941249179080146527866732n-16760123424561767223067.jpg' />

@@ -6,11 +6,18 @@ import { useEffect } from 'react'
 
 export const Layout = () => {
   const navigate = useNavigate()
-  const { profile, isFetched } = useAuth()
+  const { accessToken, profile, isFetched } = useAuth()
 
   const { pathname } = useLocation()
 
   useEffect(() => {
+    if (!accessToken) {
+      navigate('/login', {
+        state: {
+          from: pathname,
+        },
+      })
+    }
     if (!profile && isFetched) {
       navigate('/login', {
         state: {
@@ -19,6 +26,9 @@ export const Layout = () => {
       })
     }
   }, [profile])
+
+  console.log('profile', profile)
+  console.log('isFetched', isFetched)
 
   return (
     profile && (

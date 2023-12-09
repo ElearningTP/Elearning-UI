@@ -7,7 +7,7 @@ import { formatDate } from '@/utils'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { MoreHorizOutlined, PeopleAltOutlined, SendOutlined } from '@mui/icons-material'
 import { Avatar, Box, Collapse, Divider, IconButton, Menu, MenuItem, Stack, TextField, Typography } from '@mui/material'
-import { QueryClient, useMutation } from '@tanstack/react-query'
+import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { useForm } from 'react-hook-form'
 import { toast } from 'react-toastify'
 import { number, object, string } from 'yup'
@@ -23,7 +23,7 @@ const schema = object({
 })
 
 export const ForumTopic = ({ data }: ForumTopicProps) => {
-  const queryClient = new QueryClient()
+  const queryClient = useQueryClient()
 
   const { value, toggle } = useBoolean(false)
 

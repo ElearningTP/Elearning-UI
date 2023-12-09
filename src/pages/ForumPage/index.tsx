@@ -13,7 +13,6 @@ import { blue } from '@mui/material/colors'
 export const ForumPage = () => {
   const { profile } = useAuth()
 
-  const [searchCourse, setSearchCourse] = useState('')
   const [selectedForum, setSelectedForum] = useState<Forum | undefined>()
 
   const forumsInstance = forumKeys.list({ accountId: Number(profile?.data.id) })

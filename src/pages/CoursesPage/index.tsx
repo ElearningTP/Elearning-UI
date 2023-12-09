@@ -4,7 +4,6 @@ import { useState } from 'react'
 import { useAuth } from '@/hooks'
 import { coursesRegistrationKeys } from '@/services/coursesRegistration/coursesRegistration.query'
 import { BoxContent, CourseCard, PageContentHeading } from '@/components'
-import { ScheduleItem } from '../SchedulePage/components'
 
 const DEFAULT_PAGE_SIZE = 10
 export const CoursesPage = () => {
@@ -56,18 +55,7 @@ export const CoursesPage = () => {
         </Grid>
         <Grid item xs={4}>
           <Stack gap={3}>
-            <BoxContent>
-              {/* <Typography variant='h5'></Typography> */}
-              <ScheduleItem />
-            </BoxContent>
-            <BoxContent>
-              {/* <Typography variant='h5'></Typography> */}
-              <ScheduleItem />
-            </BoxContent>
-            <BoxContent>
-              {/* <Typography variant='h5'></Typography> */}
-              <ScheduleItem />
-            </BoxContent>
+            <BoxContent></BoxContent>
           </Stack>
         </Grid>
       </Grid>

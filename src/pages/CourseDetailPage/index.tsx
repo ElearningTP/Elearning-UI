@@ -12,7 +12,6 @@ export const CourseDetailPage = () => {
   const courseInstance = courseKeys.detail(Number(courseId))
   const { data: course } = useQuery(courseInstance)
 
-  console.log('course', course)
   return (
     course && (
       <>

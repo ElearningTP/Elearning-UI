@@ -1,10 +1,11 @@
 import { Box, Button, Grid, IconButton, Typography } from '@mui/material'
-import { CourseCard, ListStudent, PageContentHeading } from '../components'
+import { CourseCard, PageContentHeading } from '@/components'
 import { ArrowForward, ShowChartOutlined } from '@mui/icons-material'
 import { useNavigate } from 'react-router-dom'
-import { coursesRegistrationKeys } from '../services/coursesRegistration/coursesRegistration.query'
-import { useAuth } from '../hooks'
+import { coursesRegistrationKeys } from '../../services/coursesRegistration/coursesRegistration.query'
+import { useAuth } from '../../hooks'
 import { useQuery } from '@tanstack/react-query'
+import { ListStudent } from './components'
 
 export type CourseData = {
   thumbnail: string
@@ -36,7 +37,7 @@ export const HomePage = () => {
             </Box>
           </Box>
         </Grid>
-        <Grid item xs={8}>
+        <Grid item xs={8} height='60vh' overflow='scroll'>
           <Box bgcolor='#fff' padding={2} borderRadius={3}>
             <Box display='flex' justifyContent='space-between' my={1}>
               <Typography variant='h6'>Current courses</Typography>
